@@ -1,0 +1,130 @@
+<!doctype>
+
+<html>
+<head>
+<title>Laboratorio 3: Busqueda de tesoro</title>
+  <style>
+      form{
+        width:500px;
+        margin:10px;
+        background-color:gray;
+        padding:10px;
+       }
+    input:valid {background:green;}
+    input:invalid {background:red;}
+    </style>
+<script type= "text/javascript">
+//codigo total
+//valores de las variables y constantes
+   var boxx = 20;
+    var boxy = 30;
+    var boxwidth = 350;
+    var boxheight = 250;
+	  var grad;
+    var color;
+    var hue = [
+      [255, 0, 0],
+      [255, 255, 0],
+      [0, 255, 0],
+      [0, 255, 255],
+      [0, 0, 255],
+      [255, 0, 255]
+    ];
+	
+	
+// creacion imagen de personajes buenos
+var  clerigo = new Image();
+    clerigo.src="clerigo.jpg";
+var guerrero= new Image();
+  guerrero.src="guerrero.jpg";
+var valkiria= new Image();
+  valkiria.src="valkiria.png";
+ 
+//creacion imagen de personajes malos
+
+var goblin = new Image();
+    goblin.src="goblin.png";
+var orco = new Image();
+    orco.src= "orco.png";
+
+	
+	
+
+	function init(){
+    /*  var h;
+      ctx = document.getElementById('canvas').getContext('2d');
+      grad = ctx.createLinearGradient(boxx,boxy,boxx+boxwidth, boxy+boxheight);
+      for (h=0; h < hue.length ;h++){
+        color = 'rgb('+hue[h][0]+','+hue[h][1]+','+hue[h][2]+')';
+        grad.addColorStop(h*1/6,color);
+      }
+      ctx.fillStyle = grad;
+      ctx.lineWidth = ballrad;
+      
+      moveball();
+      setInterval(moveball,100);
+      */
+ // se carga escenario 1
+ 
+ var h;
+      ctx = document.getElementById('canvas').getContext('2d');
+      grad = ctx.createLinearGradient(boxx,boxy,boxx+boxwidth, boxy+boxheight);
+      for (h=0; h < hue.length ;h++){
+        color = 'rgb('+hue[h][0]+','+hue[h][1]+','+hue[h][2]+')';
+        grad.addColorStop(h*1/6,color);
+      }
+      ctx.fillStyle = grad;
+      ctx.lineWidth = ballrad;
+      
+  // valores predefinidos de los personajes 
+
+	   
+	  
+	  
+	  }
+	  
+	  
+	  function drawPersonaje{
+	  
+	  
+	  
+	  }
+	  
+	  
+
+</script>
+
+</head>
+ <body onload="init();">
+    <canvas id="canvas" width="400" height="300">
+      Your browser doesn't support canvas element, so meditate about that
+    </canvas>
+    <br/>
+      <form name="puntajes" id="formPrincipal" onSubmit="return change();"> 
+    <center><h1> Puntaje y control</h1></center>
+	 
+     	 <p>Mover!</p>
+	<input class="button"type="submit" value="up" />
+	<input class="button" type="submit" value="down" />
+   	<input class="button" type="submit" value="left" />
+    <input class="button" type="submit" value="right" />
+    <p> tu puntaje es: </p>
+	
+
+    </form>
+    	<div id="lucha" width="400" height="300">
+	<style>
+	form1{
+        width:380px;
+        margin:280px;
+        background-color:#b10515;
+        padding:20px;
+		border: 2px solid black;
+       }
+	</style>
+	
+	</div>
+	
+	</body>
+
+</html>
